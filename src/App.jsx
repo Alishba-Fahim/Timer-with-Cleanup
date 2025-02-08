@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import "./app.css"
+import './App.css';
 
 const Timer = () => {
   const [count, setCount] = useState(0);
@@ -9,10 +9,7 @@ const Timer = () => {
       setCount((prevCount) => prevCount + 1);
     }, 1000);
 
-    // Cleanup the timer on component unmount
-    return () => {
-      clearInterval(timer);
-    };
+    return () => clearInterval(timer); // Cleanup timer
   }, []);
 
   return (
