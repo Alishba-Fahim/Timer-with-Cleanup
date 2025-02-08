@@ -1,0 +1,72 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #e0e5ec;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #333;
+}
+
+.app {
+  text-align: center;
+  background: #e0e5ec;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 8px 8px 15px #a3b1c6, -8px -8px 15px #ffffff;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.timer-container h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #333;
+}
+
+.timer-container p {
+  font-size: 28px;
+  color: #555;
+  background: #e0e5ec;
+  padding: 20px 40px;
+  border-radius: 15px;
+  display: inline-block;
+  margin: 0;
+  box-shadow: inset 4px 4px 8px #a3b1c6, inset -4px -4px 8px #ffffff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timer-container p:hover {
+  transform: translateY(-5px);
+  box-shadow: 6px 6px 12px #a3b1c6, -6px -6px 12px #ffffff;
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+  .app {
+    padding: 20px;
+    border-radius: 15px;
+  }
+
+  .timer-container h1 {
+    font-size: 24px;
+  }
+
+  .timer-container p {
+    font-size: 20px;
+    padding: 15px 30px;
+  }
+}
